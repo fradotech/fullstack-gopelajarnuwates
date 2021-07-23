@@ -25,6 +25,16 @@ app.use(
     })
 )
 
+app.get('/login', (req, res) => {
+    res.render('login', {
+        layout: 'layouts/main-layout',
+        title: 'Pelajar NU Wates',
+        message: 'Password salah! Coba lagi!',
+        messageClass: 'alert-danger',
+        admin
+    })
+})
+
 app.post('/login', (req, res) => {
     let email = req.body.email
     let password = req.body.password
@@ -46,7 +56,7 @@ app.post('/login', (req, res) => {
                     title: 'Pelajar NU Wates',
                     message: 'Password salah! Coba lagi!',
                     messageClass: 'alert-danger',
-                    user: null
+                    admin: getUser
                 })
             }
         } else {
@@ -55,7 +65,7 @@ app.post('/login', (req, res) => {
                 title: 'Pelajar NU Wates',
                 message: 'Email salah! Coba lagi!',
                 messageClass: 'alert-danger',
-                user: null
+                admin: getUser
             })
         }
     })
