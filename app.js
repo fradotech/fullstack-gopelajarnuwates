@@ -139,14 +139,12 @@ app.use( async (req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-    User.find({ user: req.user.email }).sort({ date: -1 }).then(user => {
-        res.render('index', {
-            layout: 'layouts/main-layout',
-            title: 'Pelajar NU Wates',
-            message: '',
-            messageClass: '',
-            user: req.user,
-        })
+    res.render('index', {
+        layout: 'layouts/main-layout',
+        title: 'Pelajar NU Wates',
+        message: '',
+        messageClass: '',
+        user: req.user,
     })
 })
 
