@@ -1,0 +1,63 @@
+<div class="d-flex justify-content-center">
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>
+</div>
+<br>
+<h5><center><%= user.data.nama %></center></h5>
+<br>
+
+<div class="d-flex justify-content-center">
+<div class="card" style="width: 400px; height: 320; background-color: white;">
+    <div class="card-body">
+        <form method="POST" action="/register">
+            <div class="form-group">
+                <label>Email</label>
+                <p class="form-control"><%= user.email %></p>
+            </div>
+            <div class="form-group">
+                <label>Periode</label>
+                <p class="form-control"><%= user.data.periode %></p>
+            </div>
+            <div class="form-group">
+                <label>Alamat Lengkap</label>
+                <p class="form-control"><%= user.data.alamat %></p>
+            </div>
+            <div class="form-group">
+                <label>Tempat Tanggal Lahir</label>
+                <p class="form-control"><%= user.data.ttl %></p>
+            </div>
+            <div class="form-group">
+                <label>Rating</label>
+                <p class="form-control"><%= user.data.ranting %></p>
+            </div>
+            <div class="form-group">
+                <label>Pendidikan Terakhir</label>
+                <p class="form-control"><%= user.data.pendidikan %></p>
+            </div>
+            <div class="form-group">
+                <label>Pendidikan/Pekerjaan Saat Ini</label>
+                <p class="form-control"><%= user.data.pendidikanSkrng %></p>
+            </div>
+
+            <div class="form-group">
+                <label>Riwayat Pengkaderan</label>
+                <p class="form-control"><%= user.data.kader %></p>
+            </div>
+            <div class="form-group">
+                <label>Pelatihan Yang Pernah Diikuti</label>
+                <p class="form-control"><%= user.data.pelatihan %></p>
+            </div>
+            <br>
+            <div class="text-center">
+                <a class="btn btn-success container" href="/edit-profile">Edit</a>
+            </div>
+            <br>
+            <div class="text-center">
+                <a class="btn btn-danger container" href="/logout">Logout</a>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

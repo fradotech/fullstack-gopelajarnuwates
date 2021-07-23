@@ -1,0 +1,137 @@
+<h5>
+    <center>Daftar Anggota IPNU IPPNU Wates</center>
+</h5>
+<br>
+<% if (message) {%>
+    <div class="alert <%= messageClass %>" role="alert">
+        <%= message %>
+    </div>
+<% } %>
+
+<div class="d-flex justify-content-center">
+    <div class="card" style="width: 400px; height: 320; background-color: white;">
+        <div class="card-body">
+            <form method="POST" action="/register">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="name" class="form-control" name="name" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Periode</label>
+                    <select class="form-control" id="rating" name="periode">
+                      <option>2013-2015</option>
+                      <option>2016-2018</option>
+                      <option>2019-2021</option>
+                      <option>2022-2024</option>
+                      <option>2025-2027</option>
+                      <option>2028-2030</option>
+                      <option>2031-2033</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Nomor Telepon/WA</label>
+                    <input type="phone" class="form-control" name="phone" placeholder="Nomor Telepon/WA" required>
+                </div>
+                <div class="form-group">
+                    <label>Alamat Lengkap</label>
+                    <input type="address" class="form-control" name="alamat" placeholder="Alamat Lengkap" required>
+                </div>
+                <div class="form-group">
+                    <label>Tempat Lahir</label>
+                    <input type="place" class="form-control" name="tempatLahir" placeholder="Tempat Lahir" required>
+                </div>
+                <div class="form-group">
+                    <label>Tanggal Lahir</label>
+                    <input type="date" class="form-control" name="tanggalLahir" placeholder="Tanggal Lahir" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ranting">Ranting</label>
+                    <select class="form-control" id="ranting" name="ranting">
+                      <option>Mojorejo</option>
+                      <option>Purworjo</option>
+                      <option>Ringinrejo</option>
+                      <option>Sukorejo</option>
+                      <option>Sumberarum</option>
+                      <option>Tugurejo</option>
+                      <option>Tulungrejo</option>
+                      <option>Wates</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pendidikan">Pendidikan Terakhir</label>
+                    <select class="form-control" id="pendidikan" name="pendidikan">
+                      <option>SD/MI</option>
+                      <option>SMP/MTs</option>
+                      <option>SMA/SMK/MA</option>
+                      <option>Perguruan Tinggi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Pendidikan/Pekerjaan Saat Ini</label>
+                    <input type="text" class="form-control" name="pendidikanSkrng" placeholder="Pendidikan/Pekerjaan Saat Ini" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Riwayat Pelatihan Pengkaderan</label>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="makesta" value="Makesta" name="makesta">
+                                <label class="form-check-label" for="makesta">
+                                  Makesta
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Tahun" name="makestaTahun">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="lakmud" value="Lakmud" name="lakmud">
+                                <label class="form-check-label" for="lakmud">
+                                  Lakmud
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Tahun" name="lakmudTahun">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="lakud" value="Lakud" name="lakud">
+                                <label class="form-check-label" for="lakud">
+                                  Lakud
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Tahun" name="lakudTahun">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Pelatihan Yang Pernah Diikuti</label>
+                    <input type="paragraph" class="form-control" name="pelatihan" placeholder="Pelatihan">
+                </div>
+                <hr>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password Baru</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success container">Daftar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
