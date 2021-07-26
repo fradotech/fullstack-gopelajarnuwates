@@ -11,6 +11,9 @@ const User = mongoose.model('User', {
         nama: {
             type: String,
         },
+        nu: {
+            type: String,
+        },
         periode: {
             type: String,
         },

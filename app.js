@@ -31,7 +31,7 @@ app.get('/login', (req, res) => {
         title: 'Pelajar NU Wates',
         message: 'Password salah! Coba lagi!',
         messageClass: 'alert-danger',
-        admin
+        user: ''
     })
 })
 
@@ -56,7 +56,7 @@ app.post('/login', (req, res) => {
                     title: 'Pelajar NU Wates',
                     message: 'Password salah! Coba lagi!',
                     messageClass: 'alert-danger',
-                    admin: getUser
+                    user: getUser
                 })
             }
         } else {
@@ -65,7 +65,7 @@ app.post('/login', (req, res) => {
                 title: 'Pelajar NU Wates',
                 message: 'Email salah! Coba lagi!',
                 messageClass: 'alert-danger',
-                admin: getUser
+                user: getUser
             })
         }
     })
@@ -100,7 +100,8 @@ app.post('/register', (req, res) => {
         email: req.body.email,
         password: req.body.password,
         data: {
-            nama: req.body.name,
+            nama: req.body.nama,
+            nu: req.body.nu,
             periode: req.body.periode,
             phone: req.body.phone,
             alamat: req.body.alamat,
@@ -199,7 +200,8 @@ app.post('/edit-profile', (req, res) => {
         email: req.user.email,
         password: req.user.password,
         data: {
-            nama: req.body.name,
+            nama: req.body.nama,
+            nu: req.body.nu,
             alamat: req.body.alamat,
             periode: req.body.periode,
             phone: req.body.phone,

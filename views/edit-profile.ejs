@@ -17,13 +17,14 @@
   <div class="card" style="width: 400px; height: 320; background-color: white;">
       <div class="card-body">
           <form method="POST" action="/edit-profile">
+              <input type="hidden" class="form-control" name="nu" value="<%= user.data.nu %>" required>
               <input type="hidden" class="form-control" name="periode" value="<%= user.data.periode %>" required>
               <input type="hidden" class="form-control" name="ranting" value="<%= user.data.ranting %>" required>
               <input type="hidden" class="form-control" name="pendidikan" value="<%= user.data.pendidikan %>" required>
               <input type="hidden" class="form-control" name="kader" value="<%= user.data.kader %>" required>
               <div class="form-group">
                   <label>Nama Lengkap</label>
-                  <input type="name" class="form-control" name="name" value="<%= user.data.nama %>" required>
+                  <input type="name" class="form-control" name="nama" value="<%= user.data.nama %>" required>
               </div>
               <div class="form-group">
                   <label>Nomor Telepon/WA</label>
